@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { Heading, Code, Link, Flex } from '@chakra-ui/react';
+import { Heading, Text, Link, Flex } from '@chakra-ui/react';
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <footer>
         <Link href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">
           <Flex alignItems="center" justifyContent="center">
-            <Code mr={2}>Powered by </Code>
+            <Text mr={2}>Powered by </Text>
             <span>
               <Image
                 src="/vercel.svg"

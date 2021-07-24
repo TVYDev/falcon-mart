@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Heading, Text, Link, Flex } from '@chakra-ui/react';
+import type { NextPage } from 'next';
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <div>
       <Head>
@@ -34,4 +35,6 @@ export default function Home() {
       </footer>
     </div>
   );
-}
+};
+
+export default Home;

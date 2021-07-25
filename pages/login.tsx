@@ -9,6 +9,8 @@ import {
 import type { NextPage } from 'next';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
+import PasswordInput from '@/components/common/passwordInput';
+
 type LoginInputs = {
   email: string;
   password: string;
@@ -33,12 +35,7 @@ const Login: NextPage = () => {
               variant="filled"
               size="sm"
             />
-            <Input
-              placeholder="Password"
-              type="password"
-              variant="filled"
-              size="sm"
-            />
+            <PasswordInput />
             <Button type="submit" size="sm">
               Sign in
             </Button>

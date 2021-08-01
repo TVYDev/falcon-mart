@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Input,
-  Stack,
-} from '@chakra-ui/react';
+import { Box, Button, Container, Heading, Stack } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import { useForm, SubmitHandler } from 'react-hook-form';
 

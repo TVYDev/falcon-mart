@@ -24,7 +24,7 @@ const Login: NextPage = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm<LoginFormInputs>({
     resolver: yupResolver(schema),
     mode: 'onChange',
@@ -43,7 +43,7 @@ const Login: NextPage = () => {
           <Stack spacing={6}>
             <EmailInput {...register('email')} errors={errors} />
             <PasswordInput {...register('password')} errors={errors} />
-            <Button type="submit" size="sm">
+            <Button type="submit" size="sm" isDisabled={!isValid}>
               Sign in
             </Button>
           </Stack>

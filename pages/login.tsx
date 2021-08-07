@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Stack,
-  FormErrorMessage,
-  FormControl,
-} from '@chakra-ui/react';
+import { Box, Button, Container, Heading, Stack } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -49,14 +41,8 @@ const Login: NextPage = () => {
         </Heading>
         <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
           <Stack spacing={6}>
-            <FormControl isInvalid={!!errors.email} id="email">
-              <EmailInput {...register('email')} />
-              <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
-            </FormControl>
-            <FormControl isInvalid={!!errors.password} id="password">
-              <PasswordInput {...register('password')} />
-              <FormErrorMessage>{errors.password?.message}</FormErrorMessage>
-            </FormControl>
+            <EmailInput {...register('email')} errors={errors} />
+            <PasswordInput {...register('password')} errors={errors} />
             <Button type="submit" size="sm">
               Sign in
             </Button>

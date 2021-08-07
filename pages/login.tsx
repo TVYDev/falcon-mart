@@ -49,11 +49,11 @@ const Login: NextPage = () => {
         </Heading>
         <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
           <Stack spacing={6}>
-            <FormControl isInvalid={!!errors.email}>
+            <FormControl isInvalid={!!errors.email} id="email">
               <EmailInput {...register('email')} />
               <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
             </FormControl>
-            <FormControl isInvalid={!!errors.password}>
+            <FormControl isInvalid={!!errors.password} id="password">
               <PasswordInput {...register('password')} />
               <FormErrorMessage>{errors.password?.message}</FormErrorMessage>
             </FormControl>

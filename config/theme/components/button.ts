@@ -12,6 +12,9 @@ const Button = {
         color: mode('#131A22', 'white')(props),
       },
     }),
+    outline: (props: any) => ({
+      borderColor: mode('#131A22', 'white')(props),
+    }),
   },
 };
 

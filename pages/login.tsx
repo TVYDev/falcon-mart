@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Container,
   Heading,
   Stack,
   Text,
@@ -15,6 +14,7 @@ import * as yup from 'yup';
 
 import EmailInput from '@/components/common/emailInput';
 import PasswordInput from '@/components/common/passwordInput';
+import SimpleLayout from '@/components/layouts/simpleLayout';
 
 interface LoginFormInputs {
   email: string;
@@ -43,7 +43,7 @@ const Login: NextPage = () => {
     alert(JSON.stringify(data));
 
   return (
-    <Container maxW={450} px={10} mt={5}>
+    <SimpleLayout>
       <Box border="1px" borderRadius="10px" p={5}>
         <Heading as="h1" mb={3} size="md">
           Sign in
@@ -69,7 +69,7 @@ const Login: NextPage = () => {
       <Button type="button" size="sm" variant="outline" isFullWidth>
         Create account
       </Button>
-    </Container>
+    </SimpleLayout>
   );
 };
 

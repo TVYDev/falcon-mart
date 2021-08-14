@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import { Box, Text, Container, Flex } from '@chakra-ui/react';
-import ColorModeSwitcher from '../common/colorModeSwitcher';
+
+import ColorModeSwitcher from '@/components/common/colorModeSwitcher';
 
 const SimpleLayout: FC = ({ children }) => {
   return (

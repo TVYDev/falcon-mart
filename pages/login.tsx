@@ -51,7 +51,7 @@ const Login: NextPage = () => {
         <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
           <Stack spacing={6}>
             <EmailInput {...register('email')} errors={errors} />
-            <Flex direction="column" alignItems="end">
+            <Flex direction="column" alignItems="flex-end">
               <PasswordInput {...register('password')} errors={errors} />
               <Link mt={1} href="#" fontSize="xs">
                 Forgot password?

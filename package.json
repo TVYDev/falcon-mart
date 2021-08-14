@@ -10,7 +10,8 @@
     "style-lint": "stylelint \"**/*.{css,scss}\" --allow-empty-input",
     "prettier-check": "prettier --config .prettierrc \"pages/**/*.{js,jsx,ts,tsx}\" --check",
     "prettier-format": "prettier --config .prettierrc \"pages/**/*.{js,jsx,ts,tsx}\" --write",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "lint-all": "yarn lint && yarn style-lint && yarn prettier-check"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.5",

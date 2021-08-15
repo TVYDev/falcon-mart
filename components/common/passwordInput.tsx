@@ -13,6 +13,7 @@ import {
   FieldErrors,
   FieldError,
 } from 'react-hook-form';
+import { useTranslation } from 'next-i18next';
 
 interface PasswordInputProps extends UseFormRegisterReturn {
   placeholder?: string;
@@ -21,8 +22,12 @@ interface PasswordInputProps extends UseFormRegisterReturn {
 
 const PasswordInput = forwardRef<typeof Input, PasswordInputProps>(
   ({ children: _, errors, ...attributes }, _ref) => {
+    const { t } = useTranslation();
     const [show, setShow] = useState(false);
     const handleClick = () => setShow(!show);
+
+    attributes.placeholder =
+      attributes.placeholder ?? t('common:input.password.placeholder');
 
     const fieldError: FieldError = errors[attributes.name];
 
@@ -48,8 +53,5 @@ const PasswordInput = forwardRef<typeof Input, PasswordInputProps>(
 );
 
 PasswordInput.displayName = 'PasswordInput';
-PasswordInput.defaultProps = {
-  placeholder: 'Password',
-};
 
 export default PasswordInput;

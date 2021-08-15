@@ -1,14 +1,18 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { Box, Text, Container, Flex } from '@chakra-ui/react';
+import { Box, Text, Container, Flex, HStack } from '@chakra-ui/react';
 
 import ColorModeSwitcher from '@/components/common/colorModeSwitcher';
+import LocaleSwitcher from '@/components/common/localeSwitcher';
 
 const SimpleLayout: FC = ({ children }) => {
   return (
     <>
       <Flex justifyContent="flex-end" p={5}>
-        <ColorModeSwitcher />
+        <HStack spacing={4}>
+          <LocaleSwitcher />
+          <ColorModeSwitcher />
+        </HStack>
       </Flex>
       <Container maxW={450} px={10} mt={10}>
         <Box w={16} h={16} mx="auto" mb={5}>

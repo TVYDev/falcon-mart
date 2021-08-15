@@ -1,0 +1,17 @@
+{
+  "input": {
+    "email": {
+      "placeholder": "Email",
+      "invalid": {
+        "email": "Email is invalid",
+        "required": "Please enter an email"
+      }
+    },
+    "password": {
+      "placeholder": "Password",
+      "invalid": {
+        "required": "Please enter a password"
+      }
+    }
+  }
+}

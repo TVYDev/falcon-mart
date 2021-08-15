@@ -1,10 +1,10 @@
 {
   "input": {
     "email": {
-      "placeholder": "អុីមែល",
+      "placeholder": "អ៊ីមែល",
       "invalid": {
-        "email": "អុីមែលមិនត្រឹមត្រូវ",
-        "required": "សូមបញ្ចូលអុីមែល"
+        "email": "អ៊ីមែលមិនត្រឹមត្រូវ",
+        "required": "សូមបញ្ចូលអ៊ីមែល"
       }
     },
     "password": {

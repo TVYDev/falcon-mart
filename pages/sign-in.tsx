@@ -18,12 +18,12 @@ import EmailInput from '@/components/common/emailInput';
 import PasswordInput from '@/components/common/passwordInput';
 import SimpleLayout from '@/components/layouts/simpleLayout';
 
-interface LoginFormInputs {
+interface SignInFormInputs {
   email: string;
   password: string;
 }
 
-const Login: NextPage = () => {
+const SignIn: NextPage = () => {
   const { t } = useTranslation();
 
   const schema = yup.object().shape({
@@ -40,19 +40,19 @@ const Login: NextPage = () => {
     register,
     handleSubmit,
     formState: { errors, isValid },
-  } = useForm<LoginFormInputs>({
+  } = useForm<SignInFormInputs>({
     resolver: yupResolver(schema),
     mode: 'onChange',
   });
 
-  const onSubmit: SubmitHandler<LoginFormInputs> = (data) =>
+  const onSubmit: SubmitHandler<SignInFormInputs> = (data) =>
     alert(JSON.stringify(data));
 
   return (
     <SimpleLayout>
       <Box border="1px" borderRadius="10px" p={5}>
         <Heading as="h1" mb={3} size="md">
-          {t('login:title')}
+          {t('signIn:title')}
         </Heading>
         <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
           <Stack spacing={6}>
@@ -60,20 +60,20 @@ const Login: NextPage = () => {
             <Flex direction="column" alignItems="flex-end">
               <PasswordInput {...register('password')} errors={errors} />
               <Link mt={1} href="#" fontSize="xs">
-                {t('login:link.forgotPassword')}
+                {t('signIn:link.forgotPassword')}
               </Link>
             </Flex>
             <Button type="submit" size="sm" isFullWidth isDisabled={!isValid}>
-              {t('login:action.signIn')}
+              {t('signIn:action.signIn')}
             </Button>
           </Stack>
         </form>
       </Box>
       <Text textAlign="center" fontSize="xs" mt={6} mb={3}>
-        {t('login:label.noAccount')}
+        {t('signIn:label.noAccount')}
       </Text>
       <Button type="button" size="sm" variant="outline" isFullWidth>
-        {t('login:action.createAccount')}
+        {t('signIn:action.createAccount')}
       </Button>
     </SimpleLayout>
   );
@@ -87,4 +87,4 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   };
 };
 
-export default Login;
+export default SignIn;

@@ -1057,10 +1057,20 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/hanuman@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/hanuman/-/hanuman-4.5.0.tgz#4dd0286b3898933be9718ec6f932052a82fe0bde"
+  integrity sha512-UwCcUkEsx7WueArxnWzwMTjIPC5VOAADAYjtQWoNuO0TQ8mvxicPGfOPqPrkSjMmFL9fS+JmommPOoLmKL9kJw==
+
 "@fontsource/lato@^4.5.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.0.tgz#c248b083be330daafade76995fed9088d5b76c04"
   integrity sha512-Y1qluoF+5b2U6MWcEz70+euZwl4TEV+9v7nZCmuRgNHb5McYc3VmbNmYNEiLsnb1HHwlAHA70P/LktP9EJ61ag==
+
+"@fontsource/nokora@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/nokora/-/nokora-4.5.0.tgz#9184da70df3977d13614e5b7d8fd63e42250d20a"
+  integrity sha512-ORKBUXfCL3aGnYTMxgY4KcUxyJ8rz4aP2kvnF2GsF264eNrKlSNJwG6EY518acPZXJ5aiW99xDFIb9MvX3wUVA==
 
 "@fontsource/raleway@^4.5.0":
   version "4.5.0"

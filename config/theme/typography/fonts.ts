@@ -1,6 +1,6 @@
 const fonts = {
-  heading: 'Raleway, sans-serif',
-  body: 'Lato, sans-serif',
+  heading: 'Raleway, Nokora, sans-serif',
+  body: 'Lato, Hanuman, sans-serif',
 };
 
 export default fonts;

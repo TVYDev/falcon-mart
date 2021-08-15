@@ -1,0 +1,35 @@
+{
+  "title": "",
+  "subTitle": {
+    "something": ""
+  },
+  "input": {
+    "email": {
+      "label": "",
+      "placeholder": "",
+      "invalid": {
+        "required": ""
+      }
+    }
+  },
+  "action": {
+    "signIn": ""
+  },
+  "link": {
+    "forgotPassword": ""
+  },
+  "label": {
+    "noAccount": ""
+  },
+  "message": {
+    "success": {
+      "signIn": ""
+    },
+    "error": {
+      "signIn": ""
+    },
+    "warning": {
+      "signIn": ""
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Sign in",
+  "action": {
+    "signIn": "Sign in",
+    "createAccount": "Create account"
+  },
+  "link": {
+    "forgotPassword": "Forgot password?"
+  },
+  "label": {
+    "noAccount": "Don't have an account?"
+  }
+}

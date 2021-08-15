@@ -7,9 +7,11 @@ import {
   Link,
   Flex,
 } from '@chakra-ui/react';
-import type { NextPage } from 'next';
+import type { NextPage, GetStaticProps } from 'next';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import * as yup from 'yup';
 
 import EmailInput from '@/components/common/emailInput';
@@ -21,15 +23,19 @@ interface LoginFormInputs {
   password: string;
 }
 
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .email('Email is invalid')
-    .required('Please enter an email'),
-  password: yup.string().required('Please enter a password'),
-});
-
 const Login: NextPage = () => {
+  const { t } = useTranslation();
+
+  const schema = yup.object().shape({
+    email: yup
+      .string()
+      .email(t('common:input.email.invalid.email'))
+      .required(t('common:input.email.invalid.required')),
+    password: yup
+      .string()
+      .required(t('common:input.password.invalid.required')),
+  });
+
   const {
     register,
     handleSubmit,
@@ -46,7 +52,7 @@ const Login: NextPage = () => {
     <SimpleLayout>
       <Box border="1px" borderRadius="10px" p={5}>
         <Heading as="h1" mb={3} size="md">
-          Sign in
+          {t('login:title')}
         </Heading>
         <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
           <Stack spacing={6}>
@@ -54,23 +60,31 @@ const Login: NextPage = () => {
             <Flex direction="column" alignItems="flex-end">
               <PasswordInput {...register('password')} errors={errors} />
               <Link mt={1} href="#" fontSize="xs">
-                Forgot password?
+                {t('login:link.forgotPassword')}
               </Link>
             </Flex>
             <Button type="submit" size="sm" isFullWidth isDisabled={!isValid}>
-              Sign in
+              {t('login:action.signIn')}
             </Button>
           </Stack>
         </form>
       </Box>
       <Text textAlign="center" fontSize="xs" mt={6} mb={3}>
-        Don&apos;t have an account?
+        {t('login:label.noAccount')}
       </Text>
       <Button type="button" size="sm" variant="outline" isFullWidth>
-        Create account
+        {t('login:action.createAccount')}
       </Button>
     </SimpleLayout>
   );
+};
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!)),
+    },
+  };
 };
 
 export default Login;

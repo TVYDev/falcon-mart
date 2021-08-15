@@ -5,6 +5,7 @@ import {
   FieldErrors,
   UseFormRegisterReturn,
 } from 'react-hook-form';
+import { useTranslation } from 'next-i18next';
 
 interface EmailInputProps extends UseFormRegisterReturn {
   placeholder?: string;
@@ -13,7 +14,13 @@ interface EmailInputProps extends UseFormRegisterReturn {
 
 const EmailInput = forwardRef<typeof Input, EmailInputProps>(
   ({ children: _, errors, ...attributes }, _ref) => {
+    const { t } = useTranslation();
+
+    attributes.placeholder =
+      attributes.placeholder ?? t('common:input.email.placeholder');
+
     const fieldError: FieldError = errors[attributes.name];
+
     return (
       <FormControl isInvalid={!!fieldError} id={attributes.name}>
         <Input type="email" variant="filled" size="sm" {...attributes} />
@@ -24,8 +31,5 @@ const EmailInput = forwardRef<typeof Input, EmailInputProps>(
 );
 
 EmailInput.displayName = 'EmailInput';
-EmailInput.defaultProps = {
-  placeholder: 'Email',
-};
 
 export default EmailInput;

@@ -1,0 +1,13 @@
+{
+  "title": "ចូលគណនី",
+  "action": {
+    "signIn": "ចូល",
+    "createAccount": "បង្កើតគណនី"
+  },
+  "link": {
+    "forgotPassword": "ភ្លេចពាក្យសម្ងាត់?"
+  },
+  "label": {
+    "noAccount": "មិនមានគណនី?"
+  }
+}

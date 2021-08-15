@@ -1,1 +1,17 @@
-{}
+{
+  "input": {
+    "email": {
+      "placeholder": "អុីមែល",
+      "invalid": {
+        "email": "អុីមែលមិនត្រឹមត្រូវ",
+        "required": "សូមបញ្ចូលអុីមែល"
+      }
+    },
+    "password": {
+      "placeholder": "ពាក្យសម្ងាត់",
+      "invalid": {
+        "required": "សូមបញ្ចូលពាក្យសម្ងាត់"
+      }
+    }
+  }
+}

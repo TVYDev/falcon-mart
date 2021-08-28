@@ -1,0 +1,12 @@
+{
+  "title": "Create Account",
+  "action": {
+    "createAccount": "Create account"
+  },
+  "link": {
+    "signIn": "Sign in"
+  },
+  "label": {
+    "alreadyGotAccount": "Have already got an account?"
+  }
+}

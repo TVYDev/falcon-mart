@@ -1,9 +1,18 @@
 {
   "input": {
+    "username": {
+      "placeholder": "Username",
+      "invalid": {
+        "format": "Username is invalid",
+        "required": "Please enter a username",
+        "min": "Username must have at least {{length}} characters",
+        "max": "Username must have at most {{length}} characters"
+      }
+    },
     "email": {
       "placeholder": "Email",
       "invalid": {
-        "email": "Email is invalid",
+        "format": "Email is invalid",
         "required": "Please enter an email"
       }
     },

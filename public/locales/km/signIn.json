@@ -1,10 +1,10 @@
 {
   "title": "ចូលគណនី",
   "action": {
-    "signIn": "ចូល",
-    "createAccount": "បង្កើតគណនី"
+    "signIn": "ចូល"
   },
   "link": {
+    "createAccount": "បង្កើតគណនី",
     "forgotPassword": "ភ្លេចពាក្យសម្ងាត់?"
   },
   "label": {

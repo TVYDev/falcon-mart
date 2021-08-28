@@ -1,0 +1,12 @@
+{
+  "title": "បង្កើតគណនី",
+  "action": {
+    "createAccount": "បង្កើតគណនី"
+  },
+  "link": {
+    "signIn": "ចូលគណនី"
+  },
+  "label": {
+    "alreadyGotAccount": "មានគណនីរួចស្រាប់?"
+  }
+}
